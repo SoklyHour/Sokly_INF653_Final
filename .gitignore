@@ -1,0 +1,15 @@
+node_modules/
+.env
+.DS_Store
+npm-debug.log
+dist/
+coverage/
+*.log
+```// filepath: /Users/mac/Desktop/653final/.gitignore
+node_modules/
+.env
+.DS_Store
+npm-debug.log
+dist/
+coverage/
+*.log
