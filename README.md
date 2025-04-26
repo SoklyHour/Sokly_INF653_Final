@@ -42,10 +42,8 @@ npm install
 
 ### 3. Configure Environment Variables
 
-- Copy `.env.example` to `.env`:
-  ```bash
-  cp .env.example .env
-  ```
+## 📄 CREATE YOUR OWN `.env`
+
 - Fill in your values:
   ```
   MONGO_URI=your_mongodb_connection_string
@@ -156,18 +154,6 @@ The API will run at [http://localhost:5001/](http://localhost:5001/)
 - **404 HTML page** for browser requests
 - **JSON error:** `{ "error": "404 Not Found" }` for API requests
 - Handles invalid inputs, missing data, duplicate actions, and unauthorized access.
-
----
-
-## 📄 Example `.env.example`
-
-```
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5001
-EMAIL_USER=your_gmail_address
-EMAIL_PASS=your_gmail_app_password
-```
 
 ---
 
