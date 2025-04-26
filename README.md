@@ -6,8 +6,8 @@ Supports user authentication, admin controls, QR code ticketing, email confirmat
 ---
 ## 🌐 Deployment
 
-Root project URL: https://sokly-inf653-final.onrender.com/
-REST API root URL: https://sokly-inf653-final.onrender.com/api/events
+- **Root project URL**: https://sokly-inf653-final.onrender.com/
+- **REST API root URL**: https://sokly-inf653-final.onrender.com/api/events
 
 ---
 
