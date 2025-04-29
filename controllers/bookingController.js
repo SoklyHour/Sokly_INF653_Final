@@ -48,7 +48,7 @@ exports.createBooking = async (req, res) => {
             <b>Your booking is confirmed!</b><br>
             Booking ID: ${booking._id}<br>
             QR Code:<br>
-            <img src="${qrCode}" alt="QR Code" style="width:200px;height:200px;display:block;margin-top:10px;"/>
+            <img src="${qrCode}" alt="QR Code" "/>
           </div>
         `
       });
@@ -85,8 +85,15 @@ exports.getBookingById = async (req, res) => {
 exports.validateTicket = async (req, res) => {
   try {
     const { qr } = req.params;
-    // Find the booking by QR code string
-    const booking = await Booking.findOne({ qrCode: qr });
+    // QR code format: userId-eventId-timestamp
+    const parts = qr.split('-');
+    if (parts.length < 3) {
+      return res.status(400).json({ valid: false, message: 'Invalid QR code format' });
+    }
+    const eventId = parts[1]; // Extract event ID
+
+    // Find booking by event ID and QR code
+    const booking = await Booking.findOne({ event: eventId, qrCode: qr });
     if (!booking) return res.status(404).json({ valid: false, message: 'Invalid ticket' });
     res.json({ valid: true, booking });
   } catch (err) {
