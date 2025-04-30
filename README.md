@@ -1,7 +1,7 @@
 # 🎟️ Event Ticketing System API
 
 A robust Node.js REST API for managing events, bookings, and users, built with Express and MongoDB.  
-Supports user authentication, admin controls, QR code ticketing, email confirmations, and more.
+Supports user authentication, admin controls, QR code ticketing and email confirmations.
 
 ---
 ## 🌐 Deployment
